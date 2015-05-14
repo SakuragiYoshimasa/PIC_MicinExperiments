@@ -1,0 +1,15 @@
+1:                 #include<pic.h>
+2:                
+
+3:                 void main(){
+4:                 	TRISB = 0b11000001;
+	0005    30C1     MOVLW 0xc1
+ 	0006    1683     BSF 0x3, 0x5
+	0007    1303     BCF 0x3, 0x6
+	0008    0086     MOVWF 0x6
+5:                 	RB1 = 1;
+	0009    1283     BCF 0x3, 0x5
+	000A    1486     BSF 0x6, 0x1
+6:                 }
+  
+	000B    0183     CLRF 0x3
